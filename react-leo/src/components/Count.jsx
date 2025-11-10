@@ -1,19 +1,17 @@
-import { useState } from 'react'
+function Count({ count, setCount }) {
 
 
 
-function Count() {
-    const [count, setCount] = useState(0)
-
+    function Click() {
+        setCount(count + 1)
+    }
     
-
-    return (
-        <>
-        <p>Count is: {count}</p>
-        <button onClick={ () => setCount(count + 1)}></button>
-        </>
-    )
+  return (
+    <>
+      <p>Count is: {count}</p>
+      <button onClick={Click}>Increase</button>
+    </>
+  );
 }
 
-
-export default Count
+export default Count;
